@@ -15,7 +15,7 @@ export function Essence() {
             className="order-2 lg:order-1"
           >
             <img
-              src="/images/graos-de-cafe.jpg"
+              src="/images/graos-de-cafe.png"
               alt="Grãos de café"
               className="aspect-[4/5] w-full object-cover"
             />
