@@ -1,0 +1,9 @@
+export { Hero } from "./hero";
+export { Differentials } from "./differentials";
+export { Categories } from "./categories";
+export { FeaturedProducts } from "./featured-products";
+export { Essence } from "./essence";
+export { Quote } from "./quote";
+export { Founder } from "./founder";
+export { Testimonials } from "./testimonials";
+export { FinalCTA } from "./final-cta";
