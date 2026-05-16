@@ -146,7 +146,7 @@ export function ProductGrid() {
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/5 transition-colors duration-500" />
                       </div>
 
-                      <div className="flex flex-col p-4 md:p-5 flex-1">
+                      <div className="flex flex-1 flex-col p-4 md:p-5">
                         <div className="flex items-start justify-between gap-2 mb-0.5">
                           <h3 className="font-headline text-base md:text-lg text-primary leading-tight">
                             {product.name}
