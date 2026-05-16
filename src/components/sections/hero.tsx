@@ -67,7 +67,7 @@ export function Hero() {
               </Button>
             </a>
             <a
-              href={`https://wa.me/${5511999990000}?text=${encodeURIComponent("Olá! Gostaria de fazer um pedido.")}`}
+              href={`https://wa.me/${5521994343928}?text=${encodeURIComponent("Olá! Gostaria de fazer um pedido.")}`}
               target="_blank"
               rel="noopener noreferrer"
             >

@@ -5,7 +5,7 @@ export const SITE_DESCRIPTION =
   "Saúde, sabor e bem-estar em cada detalhe. Produtos naturais selecionados para transformar sua rotina com mais qualidade, aroma e equilíbrio.";
 export const SITE_URL = "https://graonatural.com.br";
 
-export const WHATSAPP_NUMBER = "5511999990000";
+export const WHATSAPP_NUMBER = "5521994343928";
 export const WHATSAPP_MESSAGE = "Olá! Gostaria de fazer um pedido.";
 
 export const NAV_LINKS: NavLink[] = [
@@ -18,7 +18,7 @@ export const NAV_LINKS: NavLink[] = [
 export const CONTACT_INFO = {
   address: "Rua das Amendoeiras, 1024\nJardins, São Paulo - SP",
   email: "contato@graonatural.com.br",
-  phone: "+55 (11) 99999-0000",
+  phone: "+55 (21) 9.9434-3928",
 };
 
 export const FOUNDER = {

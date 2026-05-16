@@ -41,15 +41,16 @@ export function CartDrawer() {
   } = useCart();
 
   const handleWhatsApp = () => {
-    let message = "Olá! Gostaria de finalizar meu pedido:\n\n";
-    items.forEach((item) => {
-      message += `${item.quantity}x ${item.product.name} - R$ ${(
-        item.product.price * item.quantity
-      )
-        .toFixed(2)
-        .replace(".", ",")}\n`;
+    let message = "🛒 *Novo Pedido - Grão Natural*\n\n";
+    items.forEach((item, index) => {
+      message += `*${index + 1}. ${item.product.name}*\n`;
+      message += `   🔢 Quantidade: ${item.quantity}\n`;
+      message += `   💰 Valor: R$ ${(item.product.price * item.quantity).toFixed(2).replace(".", ",")}\n\n`;
     });
-    message += `\nTotal: R$ ${totalPrice.toFixed(2).replace(".", ",")}`;
+    message += `━━━━━━━━━━━━━━━━\n`;
+    message += `*💰 Total: R$ ${totalPrice.toFixed(2).replace(".", ",")}*\n`;
+    message += `━━━━━━━━━━━━━━━━\n\n`;
+    message += `🙏 *Agradecemos pela preferência!*`;
     const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
       message
     )}`;

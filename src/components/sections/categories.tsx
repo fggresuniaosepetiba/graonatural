@@ -5,6 +5,12 @@ import { ArrowRight } from "lucide-react";
 import { categories } from "@/data/products";
 import { SectionHeader } from "@/components/ui/section";
 
+const sectionMap: Record<string, string> = {
+  "chas": "Chás-Naturais",
+  "temperos": "Temperos-e-Condimentos",
+  "graos": "Grãos,-Cereais-e-Suplementos-Naturais",
+};
+
 export function Categories() {
   return (
     <section className="py-24 md:py-32 bg-surface-container-low">
@@ -17,10 +23,11 @@ export function Categories() {
         <div className="grid grid-cols-1 md:grid-cols-12 md:grid-rows-2 gap-5">
           {categories.map((cat, i) => {
             const isLarge = i === 1;
+            const sectionSlug = sectionMap[cat.id];
             return (
               <motion.a
                 key={cat.id}
-                href="#"
+                href={sectionSlug ? `/produtos#section-${sectionSlug}` : "#"}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}

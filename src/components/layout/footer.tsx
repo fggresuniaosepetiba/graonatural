@@ -1,6 +1,6 @@
 "use client";
 
-import { CONTACT_INFO, SITE_NAME } from "@/constants";
+import { CONTACT_INFO, SITE_NAME, WHATSAPP_NUMBER } from "@/constants";
 
 export function Footer() {
   return (
@@ -114,9 +114,14 @@ export function Footer() {
             <p className="font-body text-sm text-primary font-medium mb-3">
               {CONTACT_INFO.email}
             </p>
-            <p className="font-body text-sm text-on-surface-variant">
+            <a
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent("🌿 Olá Grão Natural!\n\n💻 Vim pelo site e gostaria de mais informações sobre os produtos.\n\n🙏 Aguardo o retorno!")}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+            >
               {CONTACT_INFO.phone}
-            </p>
+            </a>
           </div>
         </div>
 
