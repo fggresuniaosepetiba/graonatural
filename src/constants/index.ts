@@ -9,9 +9,9 @@ export const WHATSAPP_NUMBER = "5511999990000";
 export const WHATSAPP_MESSAGE = "Olá! Gostaria de fazer um pedido.";
 
 export const NAV_LINKS: NavLink[] = [
-  { label: "Home", href: "#" },
+  { label: "Home", href: "/" },
   { label: "Sobre", href: "#" },
-  { label: "Produtos", href: "#" },
+  { label: "Produtos", href: "/produtos" },
   { label: "Contato", href: "#" },
 ];
 

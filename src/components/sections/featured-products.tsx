@@ -14,7 +14,6 @@ export function FeaturedProducts() {
     const product = products.find((p) => p.id === productId);
     if (product) {
       addItem(product);
-      openCart();
     }
   };
 
@@ -31,7 +30,7 @@ export function FeaturedProducts() {
             </p>
           </div>
           <a
-            href="#"
+            href="/produtos"
             className="hidden md:inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.15em] text-primary uppercase border-b border-primary pb-0.5 hover:opacity-70 transition-opacity"
           >
             Ver todos
@@ -95,7 +94,7 @@ export function FeaturedProducts() {
 
         <div className="mt-10 text-center md:hidden">
           <a
-            href="#"
+            href="/produtos"
             className="inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.15em] text-primary uppercase"
           >
             Ver todos os produtos

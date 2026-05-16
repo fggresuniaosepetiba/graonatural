@@ -12,7 +12,7 @@ export function Footer() {
               <img
                 src="/images/graonatural_logo.jpeg"
                 alt="Grão Natural"
-                className="h-10 w-10 rounded-full object-cover"
+                className="h-12 w-12 rounded-full object-cover"
               />
               <span className="font-headline text-xl text-primary">
                 {SITE_NAME}
@@ -22,14 +22,40 @@ export function Footer() {
               Dedicados à curadoria de ingredientes puros e naturais para uma
               vida em pleno equilíbrio.
             </p>
-            <div className="flex gap-5">
-              {["Instagram", "Facebook", "Pinterest"].map((social) => (
+            <div className="flex gap-4">
+              {[
+                {
+                  name: "Instagram",
+                  href: "#",
+                  path: "M7 2C4.2 2 2 4.2 2 7v10c0 2.8 2.2 5 5 5h10c2.8 0 5-2.2 5-5V7c0-2.8-2.2-5-5-5H7zm0 2h10c1.7 0 3 1.3 3 3v10c0 1.7-1.3 3-3 3H7c-1.7 0-3-1.3-3-3V7c0-1.7 1.3-3 3-3zm10 3a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm-5 1a4 4 0 1 0 0 8 4 4 0 0 0 0-8zm0 2a2 2 0 1 1 0 4 2 2 0 0 1 0-4z",
+                  hoverColor: "hover:text-[#E4405F]",
+                },
+                {
+                  name: "Facebook",
+                  href: "#",
+                  path: "M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z",
+                  hoverColor: "hover:text-[#1877F2]",
+                },
+                {
+                  name: "Pinterest",
+                  href: "#",
+                  path: "M12 0C5.4 0 0 5.4 0 12c0 5.1 3.2 9.4 7.6 11.1-.1-.9-.2-2.4 0-3.4l1.4-6.1s-.4-.8-.4-1.9c0-1.8 1-3.2 2.3-3.2 1.1 0 1.6.8 1.6 1.8 0 1.1-.6 2.7-1 4.2-.3 1.3.6 2.3 1.9 2.3 2.3 0 4.1-2.5 4.1-6 0-3.2-2.3-5.4-5.5-5.4-3.8 0-6 2.8-6 5.7 0 1.1.4 2.3 1 3 .1.1.1.3-.1.9l-.3 1.1c-.1.5-.5.6-.9.4-1.7-.8-2.8-3.3-2.8-5.3 0-4.3 3.1-8.3 9.1-8.3 4.8 0 8.5 3.4 8.5 8 0 4.8-3 8.6-7.2 8.6-1.4 0-2.7-.7-3.2-1.6l-.9 3.4c-.3 1.3-1.2 2.9-1.8 3.9 1.4.4 2.8.6 4.3.6 6.6 0 12-5.4 12-12S18.6 0 12 0z",
+                  hoverColor: "hover:text-[#E60023]",
+                },
+              ].map(({ name, href, path, hoverColor }) => (
                 <a
-                  key={social}
-                  href="#"
-                  className="font-body text-[11px] font-semibold tracking-[0.15em] text-on-surface-variant uppercase hover:text-primary transition-colors duration-300"
+                  key={name}
+                  href={href}
+                  className={`flex items-center justify-center w-10 h-10 rounded-full border border-outline-variant/20 text-on-surface-variant transition-all duration-300 ${hoverColor} hover:border-current`}
+                  aria-label={name}
                 >
-                  {social}
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="w-5 h-5"
+                    fill="currentColor"
+                  >
+                    <path d={path} />
+                  </svg>
                 </a>
               ))}
             </div>
@@ -45,7 +71,7 @@ export function Footer() {
                   <li key={item}>
                     <a
                       href="#"
-                      className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+                      className="relative font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-200 after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
                     >
                       {item}
                     </a>
@@ -64,7 +90,7 @@ export function Footer() {
                 <li key={item}>
                   <a
                     href="#"
-                    className="font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-200"
+                    className="relative font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-200 after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
                   >
                     {item}
                   </a>

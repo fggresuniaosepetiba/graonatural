@@ -30,7 +30,7 @@ export function Hero() {
             transition={{ delay: 0.2, duration: 0.5 }}
             className="inline-block font-body text-[11px] font-semibold tracking-[0.2em] text-white/70 uppercase mb-6"
           >
-            Curadoria Natural desde 2020
+            Curadoria Natural desde 2025
           </motion.span>
 
           <motion.h1
@@ -60,17 +60,25 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.6 }}
             className="mt-10 flex flex-col sm:flex-row gap-4"
           >
-            <Button size="lg" className="bg-white text-primary hover:bg-white/90">
-              Ver Produtos
-              <ArrowRight className="ml-2 h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="secondary"
-              className="border-white/30 text-white hover:bg-white hover:text-primary"
+            <a href="/produtos">
+              <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+                Ver Produtos
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </a>
+            <a
+              href={`https://wa.me/${5511999990000}?text=${encodeURIComponent("Olá! Gostaria de fazer um pedido.")}`}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Fazer Pedido
-            </Button>
+              <Button
+                size="lg"
+                variant="secondary"
+                className="border-white/30 text-white hover:bg-white hover:text-primary"
+              >
+                Fazer Pedido
+              </Button>
+            </a>
           </motion.div>
         </motion.div>
       </div>

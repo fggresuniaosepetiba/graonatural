@@ -7,3 +7,4 @@ export { Quote } from "./quote";
 export { Founder } from "./founder";
 export { Testimonials } from "./testimonials";
 export { FinalCTA } from "./final-cta";
+export { ProductGrid } from "./product-grid";

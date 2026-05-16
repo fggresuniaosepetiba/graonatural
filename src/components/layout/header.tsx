@@ -3,14 +3,22 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ShoppingBag } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { useCart } from "@/context/cart-context";
 import { NAV_LINKS } from "@/constants";
+import { cn } from "@/utils/cn";
 
 export function Header() {
   const [visible, setVisible] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { totalItems, openCart } = useCart();
   const lastScrollY = useRef(0);
+  const pathname = usePathname();
+
+  const isActive = (href: string, label: string) => {
+    if (href === "#") return label === "Home" && pathname === "/";
+    return pathname === href;
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,11 +57,11 @@ export function Header() {
       className="z-50 bg-primary-fixed transition-transform duration-300"
     >
       <div className="mx-auto flex h-20 max-w-[1280px] items-center justify-between px-6 md:px-16">
-        <a href="#" className="relative z-50">
+        <a href="/" className="relative z-50">
           <img
             src="/images/graonatural_logo.jpeg"
             alt="Grão Natural"
-            className="h-11 w-11 rounded-full object-cover"
+            className="h-14 w-14 rounded-full object-cover"
           />
         </a>
 
@@ -62,7 +70,11 @@ export function Header() {
             <a
               key={link.label}
               href={link.href}
-              className="font-body text-[11px] font-semibold tracking-[0.15em] text-primary uppercase transition-colors duration-300 hover:text-on-primary-fixed-variant"
+              className={cn(
+                "relative font-body text-[11px] font-semibold tracking-[0.15em] text-primary uppercase transition-colors duration-300 hover:text-on-primary-fixed-variant",
+                "after:absolute after:left-0 after:-bottom-[3px] after:h-[2px] after:bg-current after:transition-all after:duration-300",
+                isActive(link.href, link.label) ? "after:w-full" : "after:w-0 hover:after:w-full"
+              )}
             >
               {link.label}
             </a>
@@ -120,7 +132,11 @@ export function Header() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: i * 0.08, duration: 0.4 }}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="font-headline text-3xl text-primary hover:text-on-primary-fixed-variant transition-colors duration-300"
+                  className={cn(
+                    "relative font-headline text-3xl text-primary hover:text-on-primary-fixed-variant transition-colors duration-300",
+                    "after:absolute after:left-0 after:-bottom-[4px] after:h-[2px] after:bg-current after:transition-all after:duration-300",
+                    isActive(link.href, link.label) ? "after:w-full" : "after:w-0 hover:after:w-full"
+                  )}
                 >
                   {link.label}
                 </motion.a>
