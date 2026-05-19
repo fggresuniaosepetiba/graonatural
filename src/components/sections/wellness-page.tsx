@@ -9,6 +9,7 @@ const IMAGES = {
   hero: "https://images.unsplash.com/photo-1534096210335-a3b961613bb5?q=80&w=1600&auto=format&fit=crop",
   intro: "https://images.unsplash.com/photo-1501139083538-0139583c060f?q=80&w=1200&auto=format&fit=crop",
   founder: "/images/vitoria-IA.png",
+  julia: "/images/julia-ia.png",
   quote: "https://images.unsplash.com/photo-1767611098846-05ed978b17ce?q=80&w=1200&auto=format&fit=crop",
 };
 
@@ -199,76 +200,174 @@ export function WellnessPage() {
         </div>
       </section>
 
-      {/* ─── SOBRE VITÓRIA JUSTO ─── */}
-      <section className="py-28 md:py-36">
+      {/* ─── FUNDADORAS — EDITORIAL PREMIUM ─── */}
+      <section className="py-28 md:py-36 bg-white overflow-hidden">
         <div className="mx-auto max-w-[1280px] px-6 md:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
+          {/* Cabeçalho editorial */}
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
+            className="text-center mb-20 md:mb-28"
+          >
+            <span className="font-body text-[11px] font-semibold tracking-[0.2em] text-[#8B9B7A] uppercase mb-4 block">
+              Fundadoras
+            </span>
+            <h2 className="font-headline text-[clamp(2rem,4vw,3.5rem)] leading-[1.1] tracking-tight text-[#2C2C2C] mb-5">
+              Duas visões,{" "}
+              <span className="italic text-[#8B9B7A]">um propósito</span>
+            </h2>
+            <p className="font-body text-base md:text-lg text-[#5C5C5C] max-w-2xl mx-auto leading-relaxed">
+              Bem-estar também é sobre quem inspira o caminho. Duas mulheres que
+              transformaram propósito em marca, cuidado em negócio e visão em legado.
+            </p>
+          </motion.div>
+
+          {/* ─── VITÓRIA JUSTO ─── */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-14 mb-24 md:mb-32 items-center">
             <motion.div
-              {...fadeUp}
-              className="relative order-2 md:order-1"
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
+              className="md:col-span-7 relative"
             >
-              <span className="font-body text-[11px] font-semibold tracking-[0.2em] text-[#8B9B7A] uppercase mb-4 block">
-                Fundadora
-              </span>
-              <h2 className="font-headline text-[clamp(1.8rem,3.5vw,2.8rem)] leading-[1.2] tracking-tight text-[#2C2C2C] mb-6">
-                Vitória Justo
-                <br />
-                <span className="text-2xl md:text-3xl font-normal text-[#8B9B7A] italic">
-                  29 anos · empresária · CEO
-                </span>
-              </h2>
-              <div className="space-y-4 font-body text-base text-[#5C5C5C] leading-[1.8]">
-                <p>
-                  Vitória Justo é a CEO e Founder da Grão Natural, marca que
-                  nasceu da sua paixão por ingredientes puros e pelo poder
-                  transformador da alimentação consciente. Sua jornada empreendedora
-                  começou cedo, movida pela crença de que o cuidado com a
-                  alimentação é o primeiro passo para uma vida mais equilibrada e
-                  significativa.
+              <div className="aspect-[4/5] overflow-hidden">
+                <img
+                  src={IMAGES.founder}
+                  alt="Vitória Justo"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
+                />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-white/95 backdrop-blur-sm p-6 shadow-sm hidden md:block max-w-[240px]">
+                <p className="font-headline text-xl text-[#2C2C2C]">Vitória Justo</p>
+                <p className="font-body text-[10px] font-semibold tracking-[0.1em] text-[#8B9B7A] uppercase mt-1">
+                  29 anos · CEO &amp; Founder
                 </p>
-                <p>
-                  Além da Grão Natural, Vitória é Fundadora e Sócia do Grupo{" "}
-                  <strong className="text-[#2C2C2C]">
-                    Baobab Cosmetics Manufacturing Company LTDA
-                  </strong>
-                  , responsável pela marca{" "}
-                  <strong className="text-[#2C2C2C]">Baobá Cosméticos</strong>, e
-                  Sócia e Fundadora do Grupo{" "}
-                  <strong className="text-[#2C2C2C]">J2 Capital</strong>,
-                  responsável pela marca{" "}
-                  <strong className="text-[#2C2C2C]">La Dame Famme</strong>.
-                </p>
-                <p>
-                  À frente de múltiplos negócios, Vitória demonstra que é possível
-                  unir visão estratégica e sensibilidade humana. Cada empreendimento
-                  reflete seu compromisso com a qualidade, a autenticidade e o
-                  bem-estar — valores que atravessam todas as suas marcas e
-                  inspiram uma nova geração de empreendedoras.
-                </p>
-                <p>
-                  Sua visão empreendedora combina propósito, qualidade e
-                  sustentabilidade — valores que guiam cada produto e cada conteúdo
-                  que a Grão Natural entrega.
+                <div className="mt-3 w-8 h-px bg-[#D4C9B8]" />
+                <p className="font-body text-xs text-[#5C5C5C] italic mt-3 leading-relaxed">
+                  &ldquo;Empresária visionária que une estratégia e propósito.&rdquo;
                 </p>
               </div>
             </motion.div>
 
             <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="relative order-1 md:order-2"
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
+              className="md:col-span-5"
             >
-              <div className="aspect-[3/4] overflow-hidden">
+              <span className="font-body text-[10px] font-semibold tracking-[0.25em] text-[#8B9B7A] uppercase block mb-3">
+                CEO &amp; Founder
+              </span>
+              <h3 className="font-headline text-[clamp(2rem,3vw,2.8rem)] leading-[1.1] tracking-tight text-[#2C2C2C] mb-6">
+                Vitória Justo
+              </h3>
+              <div className="space-y-4 font-body text-base text-[#5C5C5C] leading-[1.8]">
+                <p>
+                  Empresária, CEO &amp; Founder da <strong className="text-[#2C2C2C]">Grão Natural</strong>.
+                  Sua jornada empreendedora começou cedo, movida pela crença de que o
+                  cuidado com a alimentação é o primeiro passo para uma vida mais
+                  equilibrada e significativa.
+                </p>
+                <p>
+                  Vitória também é fundadora e sócia do grupo{" "}
+                  <strong className="text-[#2C2C2C]">
+                    Baobab Cosmetics Manufacturing Company LTDA
+                  </strong>
+                  , responsável pela marca{" "}
+                  <strong className="text-[#2C2C2C]">Baobá Cosméticos</strong>, e
+                  sócia e fundadora do grupo{" "}
+                  <strong className="text-[#2C2C2C]">J2 Capital</strong>,
+                  responsável pela marca{" "}
+                  <strong className="text-[#2C2C2C]">La Dame Famme</strong>.
+                </p>
+                <p>
+                  À frente de múltiplos negócios, une visão estratégica e sensibilidade
+                  humana — cada empreendimento reflete seu compromisso com a qualidade,
+                  a autenticidade e o bem-estar.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          {/* ─── FRASE INSPIRADORA ─── */}
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, margin: "-50px" }}
+            transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] as const }}
+            className="text-center py-16 md:py-20 mb-24 md:mb-32"
+          >
+            <div className="w-px h-12 bg-[#D4C9B8] mx-auto mb-8" />
+            <p className="font-headline text-2xl md:text-3xl lg:text-4xl text-[#2C2C2C] italic leading-[1.4] max-w-3xl mx-auto px-4">
+              &ldquo;Cuidado, propósito e sofisticação em cada detalhe.&rdquo;
+            </p>
+            <div className="w-px h-12 bg-[#D4C9B8] mx-auto mt-8" />
+          </motion.div>
+
+          {/* ─── JULIA ─── */}
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-14 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
+              className="md:col-span-5 md:order-1"
+            >
+              <span className="font-body text-[10px] font-semibold tracking-[0.25em] text-[#8B9B7A] uppercase block mb-3">
+                CMO &amp; Founder
+              </span>
+              <h3 className="font-headline text-[clamp(2rem,3vw,2.8rem)] leading-[1.1] tracking-tight text-[#2C2C2C] mb-6">
+                Julia Andrade
+              </h3>
+              <div className="space-y-4 font-body text-base text-[#5C5C5C] leading-[1.8]">
+                <p>
+                  Julia Andrade é <strong className="text-[#2C2C2C]">CMO &amp; Founder</strong> da Grão Natural,
+                  peça fundamental na construção da marca. Com visão criativa e
+                  estratégica, conecta o público ao universo de bem-estar e
+                  naturalidade que a marca representa.
+                </p>
+                <p>
+                  Sua atuação vai além do branding — Julia é sócia e CMO da{" "}
+                  <strong className="text-[#2C2C2C]">La Dame Famme</strong>,
+                  marca do grupo empresarial{" "}
+                  <strong className="text-[#2C2C2C]">J2 Capital</strong>,
+                  onde contribui com sua expertise em posicionamento de marca e
+                  comunicação premium.
+                </p>
+                <p>
+                  Essencial para a construção da identidade da Grão Natural, sua
+                  presença combina refinamento, visão estratégica e o olhar
+                  sofisticado que define a essência da marca.
+                </p>
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, margin: "-50px" }}
+              transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
+              className="md:col-span-7 md:order-2 relative"
+            >
+              <div className="aspect-[4/5] overflow-hidden">
                 <img
-                  src={IMAGES.founder}
-                  alt="Vitória Justo"
-                  className="h-full w-full object-cover"
+                  src={IMAGES.julia}
+                  alt="Julia"
+                  className="h-full w-full object-cover transition-transform duration-700 hover:scale-[1.03]"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 bg-white p-5 shadow-sm hidden md:block">
-                <p className="font-headline text-lg text-[#2C2C2C]">Vitória Justo</p>
+              <div className="absolute -bottom-4 -left-4 bg-white/95 backdrop-blur-sm p-6 shadow-sm hidden md:block max-w-[240px]">
+                <p className="font-headline text-xl text-[#2C2C2C]">Julia Andrade</p>
                 <p className="font-body text-[10px] font-semibold tracking-[0.1em] text-[#8B9B7A] uppercase mt-1">
-                  CEO & Founder
+                  CMO &amp; Founder
+                </p>
+                <div className="mt-3 w-8 h-px bg-[#D4C9B8]" />
+                <p className="font-body text-xs text-[#5C5C5C] italic mt-3 leading-relaxed">
+                  &ldquo;Sofisticação e propósito caminham juntos.&rdquo;
                 </p>
               </div>
             </motion.div>
@@ -286,7 +385,7 @@ export function WellnessPage() {
             </blockquote>
             <div className="mt-6 w-12 h-px bg-[#D4C9B8] mx-auto" />
             <p className="mt-6 font-body text-sm text-[#8B9B7A] tracking-[0.15em] uppercase">
-              Vitória Justo — CEO &amp; Founder da Grão Natural
+              Julia Andrade — CMO &amp; Founder da Grão Natural
             </p>
           </motion.div>
         </div>
