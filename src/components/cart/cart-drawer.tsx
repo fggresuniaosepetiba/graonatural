@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import { X, Minus, Plus, Trash2, ShoppingBag, ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { useCart } from "@/context/cart-context";
 import { WHATSAPP_NUMBER } from "@/constants";
 
@@ -124,12 +125,16 @@ export function CartDrawer() {
                         transition={{ duration: 0.25 }}
                         className="flex gap-4 bg-surface-container-low p-4 group"
                       >
-                        <div
-                          className="h-20 w-20 shrink-0 bg-cover bg-center"
-                          style={{
-                            backgroundImage: `url(${item.product.image})`,
-                          }}
-                        />
+                        <div className="relative h-20 w-20 shrink-0 overflow-hidden">
+                          <Image
+                            src={item.product.image}
+                            alt={item.product.name}
+                            fill
+                            sizes="80px"
+                            quality={74}
+                            className="object-cover"
+                          />
+                        </div>
 
                         <div className="flex-1 min-w-0">
                           <div className="flex items-start justify-between gap-2">

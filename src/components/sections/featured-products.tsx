@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import Image from "next/image";
 import { products } from "@/data/products";
 import { useCart } from "@/context/cart-context";
 import { Button } from "@/components/ui/button";
@@ -60,9 +61,13 @@ export function FeaturedProducts() {
               className="group flex flex-col bg-surface-container-lowest"
             >
               <div className="aspect-square overflow-hidden relative">
-                <div
-                  className="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                  style={{ backgroundImage: `url(${product.image})` }}
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+                  quality={78}
+                  className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-500" />
               </div>

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Minus, Plus, ShoppingBag } from "lucide-react";
+import Image from "next/image";
 import { products } from "@/data/products";
 import { useCart } from "@/context/cart-context";
 import { Button } from "@/components/ui/button";
@@ -126,9 +127,13 @@ export function ProductGrid() {
                     >
                       <div className="aspect-square overflow-hidden relative">
                         {product.image ? (
-                          <div
-                            className="h-full w-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-                            style={{ backgroundImage: `url(${product.image})` }}
+                          <Image
+                            src={product.image}
+                            alt={product.name}
+                            fill
+                            sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                            quality={78}
+                            className="object-cover transition-transform duration-700 group-hover:scale-105"
                           />
                         ) : (
                           <div
