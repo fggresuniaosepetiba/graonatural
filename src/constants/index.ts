@@ -31,3 +31,11 @@ export const FOUNDER = {
   otherCompanies: ["Baobá Cosméticos"],
   groupName: "Baobab Cosmetics Manufacturing Company LTDA",
 };
+
+export const FOUNDER_JULIA = {
+  name: "Julia Andrade",
+  role: "CMO & Founder",
+  company: "Grão Natural",
+  photo: "/images/julia-ia.png",
+  otherCompanies: ["La Dame Famme"],
+};
