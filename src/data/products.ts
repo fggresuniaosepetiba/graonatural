@@ -483,8 +483,7 @@ export const products: Product[] = [
     weight: "100G",
     badge: "NATURAL",
     price: 7.50,
-    image:
-      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=800&auto=format&fit=crop",
+    image: "/images/Produtos/farinha-de-uva.png",
     category: "suplementos",
     section: "Grãos, Cereais e Suplementos Naturais",
   },
