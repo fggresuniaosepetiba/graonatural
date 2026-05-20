@@ -1,6 +1,27 @@
 import type { Product, Category, Testimonial } from "@/types";
 
-export const products: Product[] = [
+const localProductImages: Partial<Record<Product["id"], string>> = {
+  "caldo-de-camarao": "/images/Produtos/caldo-de-camarão.png",
+  "caldo-de-carne-amaciante": "/images/Produtos/caldo-de-carne-amaciante.png",
+  "caldo-de-legumes": "/images/Produtos/caldo-de-legumes.png",
+  "caldo-suino": "/images/Produtos/caldo-suíno.png",
+  "chimichurri-com-pimenta-blend": "/images/Produtos/chimichurri-com-pimenta-blend.png",
+  "chimichurri-sem-pimenta": "/images/Produtos/chimichurri-sem-pimenta.png",
+  colorau: "/images/Produtos/colorau.png",
+  "curry-indiano": "/images/Produtos/curry-indiano.png",
+  "farinha-de-uva": "/images/Produtos/farinha-de-uva.png",
+  oregano: "/images/Produtos/orégano.png",
+  "paprica-defumada": "/images/Produtos/páprica-defumada.png",
+  "paprica-doce": "/images/Produtos/páprica-doce.png",
+  "paprica-picante-premium": "/images/Produtos/páprica-picante-premium.png",
+  "pimenta-do-reino": "/images/Produtos/pimenta-do-reino.png",
+  "tempero-baiano-com-pimenta": "/images/Produtos/tempero-baiano-com-pimenta.png",
+  "tempero-baiano-sem-pimenta": "/images/Produtos/tempero-baiano-sem-pimenta.png",
+  "tempero-cominho-com-pimenta": "/images/Produtos/tempero-cominho-com-pimenta.png",
+  "tempero-do-chefe-com-curry": "/images/Produtos/tempero-do-chefe-com-curry.png",
+};
+
+const baseProducts: Product[] = [
   // Seção 1: Temperos — 100g
   {
     id: "tempero-baiano-sem-pimenta",
@@ -646,6 +667,11 @@ export const products: Product[] = [
     section: "Chás Naturais",
   },
 ];
+
+export const products: Product[] = baseProducts.map((product) => ({
+  ...product,
+  image: localProductImages[product.id] ?? product.image,
+}));
 
 export const categories: Category[] = [
   {
