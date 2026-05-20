@@ -104,12 +104,15 @@ export function ProductGrid() {
               transition={{ duration: 0.5 }}
               className="mb-16 last:mb-0"
             >
-              <div className="flex items-center gap-4 mb-10">
+              <div className="flex items-center gap-4 mb-2">
                 <h2 className="font-headline text-2xl md:text-3xl text-primary whitespace-nowrap">
                   {sectionName}
                 </h2>
                 <div className="h-px flex-1 bg-outline-variant/10" />
               </div>
+              <p className="font-body text-xs text-secondary mb-10 italic">
+                As imagens abaixo são meramente ilustrativas
+              </p>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
                 {sectionProducts.map((product, i) => {
