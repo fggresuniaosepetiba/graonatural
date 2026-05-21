@@ -62,7 +62,7 @@ const baseProducts: Product[] = [
     id: "tempero-baiano-sem-pimenta",
     name: "Tempero Baiano sem Pimenta",
     description: "Blend de ervas e especiarias no estilo baiano, suave e aromático.",
-    weight: "100G",
+    weight: "50G",
     badge: "NATURAL",
     price: 6.25,
     image:
@@ -74,7 +74,7 @@ const baseProducts: Product[] = [
     id: "tempero-baiano-com-pimenta",
     name: "Tempero Baiano com Pimenta",
     description: "Blend baiano com toque picante para quem aprecia mais sabor.",
-    weight: "100G",
+    weight: "50G",
     badge: "NATURAL",
     price: 6.25,
     image:

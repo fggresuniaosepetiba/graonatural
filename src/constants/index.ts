@@ -17,7 +17,7 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 export const CONTACT_INFO = {
-  address: "Rua das Amendoeiras, 1024\nJardins, São Paulo - SP",
+  address: "Nova Iguaçu — Rio de Janeiro, RJ",
   email: "contato@graonatural.com.br",
   phone: "+55 (21) 9.9434-3928",
 };
