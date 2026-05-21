@@ -20,7 +20,7 @@ const localProductImages: Partial<Record<Product["id"], string>> = {
   "farinha-de-aveia": "/images/Produtos/farinha-de-aveia.png",
   "farinha-de-beterraba": "/images/Produtos/farinha-de-beterraba.png",
   "farinha-de-linhaca-dourada": "/images/Produtos/farinha-linhaça-dourada.png",
-  "farinha-de-uva": "/images/Produtos/farinha-de-uva.png",
+  "farinha-de-uva": "/images/Produtos/farinha-de-uva-v2.png",
   "gengibre-em-po": "/images/Produtos/gengibre-em-pó.png",
   granola: "/images/Produtos/granola.png",
   "lemon-pepper": "/images/Produtos/lemon-pepper.png",
