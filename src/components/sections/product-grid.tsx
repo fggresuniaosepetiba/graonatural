@@ -171,11 +171,11 @@ export function ProductGrid() {
                           {product.description}
                         </p>
 
-                        <span className="font-headline text-lg md:text-xl text-primary mb-4">
+                        <span className="mt-auto font-headline text-lg md:text-xl text-primary mb-4">
                           R$ {product.price.toFixed(2).replace(".", ",")}
                         </span>
 
-                        <div className="mt-auto flex items-center gap-3">
+                        <div className="flex items-center gap-3">
                           <div className="flex items-center border border-outline-variant/20">
                             <button
                               onClick={() =>

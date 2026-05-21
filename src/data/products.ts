@@ -722,8 +722,7 @@ export const categories: Category[] = [
     name: "Grãos & Sementes",
     slug: "graos-sementes",
     description: "Ver Opções",
-    image:
-      "https://images.unsplash.com/photo-1611746872915-64382b5c76da?q=80&w=800&auto=format&fit=crop",
+    image: "/images/Produtos/grãos-e-sementes.jpeg",
   },
   {
     id: "temperos",
