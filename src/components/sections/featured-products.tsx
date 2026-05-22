@@ -48,6 +48,9 @@ export function FeaturedProducts() {
           <p className="mt-3 font-body text-base text-secondary">
             Nossas escolhas preferidas para você.
           </p>
+          <p className="mt-2 text-sm italic text-secondary">
+            <em>As imagens abaixo são meramente ilustrativas</em>
+          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-5">

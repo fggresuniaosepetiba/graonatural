@@ -35,7 +35,7 @@ export function Founder() {
               <img
                 src={FOUNDER.photo}
                 alt={`${FOUNDER.name} — ${FOUNDER.role}`}
-                className="w-full block grayscale transition-all duration-150 hover:grayscale-0 hover:scale-[1.03]"
+                className="w-full block md:grayscale transition-all duration-150 hover:grayscale-0 hover:scale-[1.03]"
               />
             </div>
             <div className="flex-1 min-w-0">
@@ -108,7 +108,7 @@ export function Founder() {
               <img
                 src={FOUNDER_JULIA.photo}
                 alt={`${FOUNDER_JULIA.name} — ${FOUNDER_JULIA.role}`}
-                className="w-full block grayscale transition-all duration-150 hover:grayscale-0 hover:scale-[1.03]"
+                className="w-full block md:grayscale transition-all duration-150 hover:grayscale-0 hover:scale-[1.03]"
               />
             </div>
             <div className="flex-1 min-w-0">

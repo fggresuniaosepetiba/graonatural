@@ -37,11 +37,14 @@ export function Header() {
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = "hidden";
+      document.documentElement.style.overflowX = "hidden";
     } else {
       document.body.style.overflow = "";
+      document.documentElement.style.overflowX = "";
     }
     return () => {
       document.body.style.overflow = "";
+      document.documentElement.style.overflowX = "";
     };
   }, [isMobileMenuOpen]);
 
@@ -121,7 +124,7 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 flex flex-col items-center justify-center bg-primary-fixed md:hidden"
+            className="fixed inset-0 z-[60] flex flex-col items-center justify-center bg-primary-fixed md:hidden overflow-x-hidden"
           >
             <nav className="flex flex-col items-center gap-8">
               {NAV_LINKS.map((link, i) => (

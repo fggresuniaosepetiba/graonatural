@@ -315,7 +315,7 @@ export function WellnessPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: 0.15, ease: [0.22, 1, 0.36, 1] as const }}
-              className="md:col-span-5 md:order-1"
+              className="md:col-span-5 md:order-1 order-2"
             >
               <span className="font-body text-[10px] font-semibold tracking-[0.25em] text-[#8B9B7A] uppercase block mb-3">
                 CMO &amp; Founder
@@ -351,7 +351,7 @@ export function WellnessPage() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] as const }}
-              className="md:col-span-7 md:order-2 relative"
+              className="md:col-span-7 md:order-2 order-1 relative"
             >
               <div className="aspect-[4/5] overflow-hidden">
                 <img
