@@ -10,7 +10,7 @@ export const WHATSAPP_MESSAGE = "Olá! Gostaria de fazer um pedido.";
 
 export const NAV_LINKS: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "Sobre", href: "#" },
+  { label: "Sobre", href: "/sobre" },
   { label: "Bem-estar", href: "/bem-estar" },
   { label: "Produtos", href: "/produtos" },
   { label: "Contato", href: "#" },

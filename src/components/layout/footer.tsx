@@ -66,18 +66,21 @@ export function Footer() {
               Links
             </h6>
             <ul className="space-y-4">
-              {["Sobre Nós", "Catálogo", "Termos de Uso", "Política de Privacidade"].map(
-                (item) => (
-                  <li key={item}>
-                    <a
-                      href="#"
-                      className="relative font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-200 after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
-                    >
-                      {item}
-                    </a>
-                  </li>
-                )
-              )}
+              {[
+                { label: "Sobre Nós", href: "/sobre" },
+                { label: "Catálogo", href: "/produtos" },
+                { label: "Termos de Uso", href: "#" },
+                { label: "Política de Privacidade", href: "#" },
+              ].map((item) => (
+                <li key={item.label}>
+                  <a
+                    href={item.href}
+                    className="relative font-body text-sm text-on-surface-variant hover:text-primary transition-colors duration-200 after:absolute after:left-0 after:-bottom-[2px] after:h-[2px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))}
             </ul>
           </div>
 
