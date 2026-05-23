@@ -13,21 +13,21 @@ const storyImage =
 const missionItems = [
   {
     icon: Target,
-    title: "Missao",
+    title: "Missão",
     description:
-      "Levar alimentos naturais para o dia a dia com curadoria rigorosa, sabor e cuidado real com cada familia.",
+      "Levar alimentos naturais para o dia a dia com curadoria rigorosa, sabor e cuidado real com cada família.",
   },
   {
     icon: Eye,
-    title: "Visao",
+    title: "Visão",
     description:
-      "Ser referencia em bem-estar e alimentacao consciente, aproximando pessoas de escolhas mais leves e sustentaveis.",
+      "Ser referência em bem-estar e alimentação consciente, aproximando pessoas de escolhas mais leves e sustentáveis.",
   },
   {
     icon: Heart,
     title: "Valores",
     description:
-      "Transparencia, respeito a natureza, qualidade constante e relacionamento humano em cada atendimento.",
+      "Transparência, respeito à natureza, qualidade constante e relacionamento humano em cada atendimento.",
   },
 ];
 
@@ -35,22 +35,22 @@ const differentials = [
   {
     icon: Leaf,
     title: "Produtos Naturais",
-    description: "Selecao criteriosa de ingredientes puros, sem excessos e com origem confiavel.",
+    description: "Seleção criteriosa de ingredientes puros, sem excessos e com origem confiável.",
   },
   {
     icon: Shield,
     title: "Qualidade Garantida",
-    description: "Controle rigoroso em cada etapa para manter padrao elevado e experiencia consistente.",
+    description: "Controle rigoroso em cada etapa para manter padrão elevado e experiência consistente.",
   },
   {
     icon: Eye,
-    title: "Transparencia",
-    description: "Comunicacao clara sobre processos, origem e compromisso com escolhas responsaveis.",
+    title: "Transparência",
+    description: "Comunicação clara sobre processos, origem e compromisso com escolhas responsáveis.",
   },
   {
     icon: Heart,
     title: "Cuidado Humano",
-    description: "Atendimento proximo para entender cada necessidade e apoiar sua rotina de bem-estar.",
+    description: "Atendimento próximo para entender cada necessidade e apoiar sua rotina de bem-estar.",
   },
 ];
 
@@ -81,7 +81,7 @@ export function AboutPage() {
             className="max-w-2xl"
           >
             <span className="mb-6 inline-block font-body text-[11px] font-semibold tracking-[0.2em] text-white/70 uppercase">
-              Sobre a Grao Natural
+              Sobre a Grão Natural
             </span>
             <h1 className="font-headline text-[clamp(2.4rem,6vw,4.4rem)] leading-[1.08] tracking-tight text-white">
               Escolhas naturais
@@ -89,7 +89,7 @@ export function AboutPage() {
               <span className="italic">que aproximam, cuidam e transformam</span>
             </h1>
             <p className="mt-6 max-w-xl font-body text-base leading-relaxed text-white/80 md:text-lg">
-              Nascemos para tornar a alimentacao saudavel mais simples, verdadeira e presente na rotina de quem busca bem-estar com confianca.
+              Nascemos para tornar a alimentação saudável mais simples, verdadeira e presente na rotina de quem busca bem-estar com confiança.
             </p>
             <div className="mt-10 flex flex-col gap-4 sm:flex-row">
               <a href="/produtos">
@@ -122,20 +122,20 @@ export function AboutPage() {
         <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-14 px-6 md:grid-cols-2 md:gap-20 md:px-16">
           <motion.div {...fadeUp}>
             <span className="mb-6 inline-block font-body text-[11px] font-semibold tracking-[0.2em] text-primary uppercase">
-              Nossa Historia
+              Nossa História
             </span>
             <h2 className="font-headline text-[clamp(2rem,4vw,3.4rem)] leading-[1.12] tracking-tight text-primary">
-              Proposito em cada detalhe
+              Propósito em cada detalhe
             </h2>
             <div className="mt-7 space-y-5 font-body text-base leading-relaxed text-secondary md:text-lg">
               <p>
-                A Grao Natural nasceu do desejo de aproximar pessoas de uma alimentacao mais consciente, com ingredientes escolhidos com criterio, respeito e sensibilidade.
+                A Grão Natural nasceu do desejo de aproximar pessoas de uma alimentação mais consciente, com ingredientes escolhidos com critério, respeito e sensibilidade.
               </p>
               <p>
-                Mais do que vender produtos, construimos relacoes de confianca. Cada cha, grao e tempero carrega uma escolha feita com responsabilidade ambiental e compromisso com seu bem-estar.
+                Mais do que vender produtos, construímos relações de confiança. Cada chá, grão e tempero carrega uma escolha feita com responsabilidade ambiental e compromisso com seu bem-estar.
               </p>
               <p>
-                Com um olhar humano e atencao constante a qualidade, seguimos cultivando uma marca que valoriza transparencia, proximidade e autenticidade.
+                Com um olhar humano e atenção constante à qualidade, seguimos cultivando uma marca que valoriza transparência, proximidade e autenticidade.
               </p>
             </div>
           </motion.div>
@@ -159,7 +159,7 @@ export function AboutPage() {
           <motion.div {...fadeUp} className="mb-14 text-center md:mb-16">
             <span className="mb-5 inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.2em] text-primary uppercase">
               <Leaf className="h-3.5 w-3.5" />
-              Missao, Visao e Valores
+              Missão, Visão e Valores
             </span>
             <h2 className="font-headline text-[clamp(1.9rem,3.8vw,3.1rem)] leading-[1.12] tracking-tight text-primary">
               O que guia cada escolha da marca
@@ -196,7 +196,7 @@ export function AboutPage() {
               Diferenciais
             </span>
             <h2 className="font-headline text-[clamp(1.9rem,3.8vw,3.1rem)] leading-[1.12] tracking-tight text-primary">
-              Naturalidade com excelencia e confianca
+              Naturalidade com excelência e confiança
             </h2>
           </motion.div>
 
