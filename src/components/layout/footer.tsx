@@ -3,6 +3,8 @@
 import { CONTACT_INFO, SITE_NAME, WHATSAPP_NUMBER } from "@/constants";
 
 export function Footer() {
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="border-t border-outline-variant/10 bg-surface-container-low">
       <div className="mx-auto max-w-[1280px] px-6 md:px-16 py-20">
@@ -130,7 +132,7 @@ export function Footer() {
 
         <div className="mt-16 pt-8 border-t border-outline-variant/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="font-body text-xs text-on-surface-variant/60">
-            © 2024 {SITE_NAME}. Todos os direitos reservados.
+            © {currentYear} {SITE_NAME}. Todos os direitos reservados.
           </p>
           <span className="font-body text-[10px] font-semibold tracking-[0.2em] text-on-surface-variant/30 uppercase">
             Feito com propósito
