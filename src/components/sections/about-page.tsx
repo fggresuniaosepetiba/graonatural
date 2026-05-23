@@ -54,6 +54,33 @@ const differentials = [
   },
 ];
 
+const storyBlocks = [
+  {
+    title: "Origem com propósito",
+    text: "A Grão Natural nasceu de um sonho antigo, pessoal e cheio de significado: levar saúde, bem-estar e qualidade de vida por meio de escolhas mais naturais.",
+  },
+  {
+    title: "Uma história real",
+    text: "Esse propósito começou dentro de casa. Foi na prática da rotina que surgiu a certeza de que alimentação saudável também é cuidado e transformação.",
+  },
+  {
+    title: "Início da jornada",
+    text: "Em outubro de 2025, Vitória convidou Julia para caminhar ao seu lado. Juntas, iniciaram a construção da marca com coragem, carinho e visão de longo prazo.",
+  },
+  {
+    title: "Crescimento consistente",
+    text: "O primeiro catálogo começou com cerca de 20 produtos. Hoje, a marca já opera com uma média de 60 itens e segue evoluindo com confiança.",
+  },
+  {
+    title: "Primeiro ciclo",
+    text: "Neste primeiro ano, a Grão Natural celebrou aprendizados, desafios e conquistas importantes que reforçaram a essência do negócio.",
+  },
+  {
+    title: "Próximos passos",
+    text: "Até outubro, novos projetos e novidades serão apresentados. Porque a Grão Natural nunca foi apenas uma loja, e sim uma trajetória de cuidado.",
+  },
+];
+
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
   whileInView: { opacity: 1, y: 0 },
@@ -118,39 +145,76 @@ export function AboutPage() {
         <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-surface to-transparent" />
       </section>
 
-      <section className="bg-surface py-24 md:py-32">
-        <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-14 px-6 md:grid-cols-2 md:gap-20 md:px-16">
-          <motion.div {...fadeUp}>
-            <span className="mb-6 inline-block font-body text-[11px] font-semibold tracking-[0.2em] text-primary uppercase">
-              Nossa História
-            </span>
-            <h2 className="font-headline text-[clamp(2rem,4vw,3.4rem)] leading-[1.12] tracking-tight text-primary">
-              Propósito em cada detalhe
-            </h2>
-            <div className="mt-7 space-y-5 font-body text-base leading-relaxed text-secondary md:text-lg">
-              <p>
-                A Grão Natural nasceu do desejo de aproximar pessoas de uma alimentação mais consciente, com ingredientes escolhidos com critério, respeito e sensibilidade.
-              </p>
-              <p>
-                Mais do que vender produtos, construímos relações de confiança. Cada chá, grão e tempero carrega uma escolha feita com responsabilidade ambiental e compromisso com seu bem-estar.
-              </p>
-              <p>
-                Com um olhar humano e atenção constante à qualidade, seguimos cultivando uma marca que valoriza transparência, proximidade e autenticidade.
-              </p>
-            </div>
-          </motion.div>
+      <section className="relative overflow-hidden bg-surface py-24 md:py-32">
+        <div className="pointer-events-none absolute -top-20 left-1/4 h-52 w-52 rounded-full bg-primary/8 blur-3xl" />
+        <div className="pointer-events-none absolute -right-16 bottom-10 h-48 w-48 rounded-full bg-tertiary/10 blur-3xl" />
 
-          <motion.div
+        <div className="mx-auto max-w-[1280px] px-6 md:px-16">
+          <div className="grid grid-cols-1 gap-14 lg:grid-cols-12 lg:gap-16">
+            <motion.div {...fadeUp} className="lg:col-span-7">
+              <span className="mb-6 inline-flex items-center gap-2 font-body text-[11px] font-semibold tracking-[0.2em] text-primary uppercase">
+                <Leaf className="h-3.5 w-3.5" />
+                Nossa História
+              </span>
+              <h2 className="max-w-2xl font-headline text-[clamp(2.1rem,4vw,3.5rem)] leading-[1.08] tracking-tight text-primary">
+                Conheça a trajetória que transformou cuidado em propósito
+              </h2>
+              <p className="mt-6 max-w-2xl font-body text-base leading-relaxed text-secondary md:text-lg">
+                Um caminho construído com afeto, consistência e escolhas conscientes para levar bem-estar real ao dia a dia.
+              </p>
+
+              <div className="mt-10 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5">
+                {storyBlocks.map((block, index) => (
+                  <motion.article
+                    key={block.title}
+                    initial={{ opacity: 0, y: 16 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{ delay: index * 0.05, duration: 0.45 }}
+                    className="rounded-2xl border border-outline-variant/20 bg-surface-container-low/50 p-5"
+                  >
+                    <h3 className="mb-2 font-body text-[11px] font-semibold tracking-[0.16em] text-primary uppercase">
+                      {block.title}
+                    </h3>
+                    <p className="font-body text-sm leading-relaxed text-secondary">{block.text}</p>
+                  </motion.article>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              {...fadeUp}
+              transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] as const }}
+              className="relative lg:col-span-5"
+            >
+              <div className="overflow-hidden rounded-[30px] border border-outline-variant/20 bg-surface-container-low p-2 shadow-[0_24px_70px_-40px_rgba(23,31,20,0.45)]">
+                <img
+                  src={storyImage}
+                  alt="Ingredientes naturais organizados em bancada"
+                  className="aspect-[4/5] w-full rounded-[22px] object-cover"
+                />
+              </div>
+
+              <div className="mt-5 rounded-2xl border border-outline-variant/20 bg-surface px-5 py-4 sm:absolute sm:bottom-6 sm:left-6 sm:right-6 sm:mt-0">
+                <p className="font-body text-[11px] font-semibold tracking-[0.18em] text-primary uppercase">
+                  Outubro de 2025
+                </p>
+                <p className="mt-1 font-body text-sm leading-relaxed text-secondary">
+                  O momento em que o sonho saiu do papel e ganhou forma com coragem, dedicação e um compromisso real com cada detalhe.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+
+          <motion.blockquote
             {...fadeUp}
-            transition={{ duration: 0.65, delay: 0.1, ease: [0.22, 1, 0.36, 1] as const }}
-            className="overflow-hidden"
+            transition={{ duration: 0.6, delay: 0.08, ease: [0.22, 1, 0.36, 1] as const }}
+            className="mt-12 rounded-2xl border border-outline-variant/20 bg-surface-container-low/40 px-6 py-8 text-center md:mt-14 md:px-12"
           >
-            <img
-              src={storyImage}
-              alt="Ingredientes naturais organizados em bancada"
-              className="aspect-[4/5] w-full object-cover"
-            />
-          </motion.div>
+            <p className="font-headline text-[clamp(1.4rem,2.4vw,2rem)] leading-[1.3] tracking-tight text-primary">
+              "Mais do que uma loja, a Grão Natural é um sonho vivo que cuida de pessoas por meio da saúde e do bem-estar."
+            </p>
+          </motion.blockquote>
         </div>
       </section>
 
