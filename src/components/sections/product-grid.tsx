@@ -80,7 +80,7 @@ export function ProductGrid() {
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className="whitespace-nowrap font-body text-[11px] font-semibold tracking-[0.1em] uppercase px-4 py-2.5 rounded-full border border-outline-variant/20 text-on-surface-variant hover:border-primary hover:text-primary hover:bg-primary/5 transition-all duration-300"
+                className="shrink-0 whitespace-nowrap rounded-full border border-outline-variant/20 px-3 py-2 font-body text-[10px] leading-none font-semibold tracking-[0.08em] text-on-surface-variant uppercase transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary sm:px-4 sm:py-2.5 sm:text-[11px] sm:tracking-[0.1em]"
               >
                 {section}
               </button>
@@ -104,11 +104,11 @@ export function ProductGrid() {
               transition={{ duration: 0.5 }}
               className="mb-16 last:mb-0"
             >
-              <div className="flex items-center gap-4 mb-2">
-                <h2 className="font-headline text-2xl md:text-3xl text-primary whitespace-nowrap">
+              <div className="mb-2 flex flex-col items-start gap-3 md:flex-row md:items-center md:gap-4">
+                <h2 className="max-w-full text-balance font-headline text-2xl leading-tight text-primary md:text-3xl">
                   {sectionName}
                 </h2>
-                <div className="h-px flex-1 bg-outline-variant/10" />
+                <div className="hidden h-px flex-1 bg-outline-variant/10 md:block" />
               </div>
               <p className="font-body text-xs text-secondary mb-10 italic">
                 As imagens abaixo são meramente ilustrativas
