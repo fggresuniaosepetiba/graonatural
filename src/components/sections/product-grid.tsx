@@ -74,13 +74,13 @@ export function ProductGrid() {
           </p>
         </div>
 
-        <div className="mb-14 overflow-x-auto scrollbar-hide -mx-6 md:-mx-16 px-6 md:px-16">
-          <div className="flex gap-2 min-w-max">
+        <div className="mb-14">
+          <div className="flex flex-wrap gap-2">
             {sections.map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}
-                className="shrink-0 whitespace-nowrap rounded-full border border-outline-variant/20 px-3 py-2 font-body text-[10px] leading-none font-semibold tracking-[0.08em] text-on-surface-variant uppercase transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary sm:px-4 sm:py-2.5 sm:text-[11px] sm:tracking-[0.1em]"
+                className="rounded-full border border-outline-variant/20 px-3 py-2 font-body text-[10px] leading-none font-semibold tracking-[0.08em] text-on-surface-variant uppercase transition-all duration-300 hover:border-primary hover:bg-primary/5 hover:text-primary sm:px-4 sm:py-2.5 sm:text-[11px] sm:tracking-[0.1em]"
               >
                 {section}
               </button>
@@ -175,8 +175,8 @@ export function ProductGrid() {
                           R$ {product.price.toFixed(2).replace(".", ",")}
                         </span>
 
-                        <div className="flex items-center gap-3">
-                          <div className="flex items-center border border-outline-variant/20">
+                        <div className="flex flex-col items-start gap-2 min-[1250px]:flex-row min-[1250px]:items-center min-[1250px]:gap-3">
+                          <div className="flex w-fit items-center border border-outline-variant/20 shrink-0">
                             <button
                               onClick={() =>
                                 setQuantities((prev) => ({
@@ -184,11 +184,11 @@ export function ProductGrid() {
                                   [product.id]: Math.max(1, qty - 1),
                                 }))
                               }
-                              className="flex h-8 w-8 items-center justify-center hover:bg-surface-container transition-colors"
+                              className="flex h-7 w-7 items-center justify-center transition-colors hover:bg-surface-container min-[1250px]:h-8 min-[1250px]:w-8"
                             >
-                              <Minus className="h-3 w-3" />
+                              <Minus className="h-2.5 w-2.5 min-[1250px]:h-3 min-[1250px]:w-3" />
                             </button>
-                            <span className="flex h-8 w-9 items-center justify-center font-body text-sm font-medium tabular-nums">
+                            <span className="flex h-7 w-8 items-center justify-center font-body text-xs font-medium tabular-nums min-[1250px]:h-8 min-[1250px]:w-9 min-[1250px]:text-sm">
                               {qty}
                             </span>
                             <button
@@ -198,19 +198,19 @@ export function ProductGrid() {
                                   [product.id]: qty + 1,
                                 }))
                               }
-                              className="flex h-8 w-8 items-center justify-center hover:bg-surface-container transition-colors"
+                              className="flex h-7 w-7 items-center justify-center transition-colors hover:bg-surface-container min-[1250px]:h-8 min-[1250px]:w-8"
                             >
-                              <Plus className="h-3 w-3" />
+                              <Plus className="h-2.5 w-2.5 min-[1250px]:h-3 min-[1250px]:w-3" />
                             </button>
                           </div>
 
                           <Button
                             size="sm"
-                            className="flex-1 gap-1.5 text-[9px]"
+                            className="h-7 w-full min-w-0 justify-center gap-1 px-2.5 text-[8px] min-[1024px]:min-w-[112px] min-[1250px]:h-8 min-[1250px]:w-auto min-[1250px]:flex-1 min-[1250px]:gap-1.5 min-[1250px]:px-3 min-[1250px]:text-[9px]"
                             onClick={() => handleAddToCart(product.id)}
                           >
-                            <ShoppingBag className="h-3 w-3" />
-                            Adicionar
+                            <ShoppingBag className="h-2.5 w-2.5 shrink-0 min-[1250px]:h-3 min-[1250px]:w-3" />
+                            <span className="whitespace-nowrap">Adicionar</span>
                           </Button>
                         </div>
                       </div>

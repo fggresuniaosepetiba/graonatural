@@ -186,7 +186,7 @@ export function Header() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -14 }}
               transition={{ duration: 0.3, ease: [0.22, 1, 0.36, 1] }}
-              className="relative z-10 flex h-dvh w-full flex-col bg-primary-fixed/95 px-6 pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]"
+              className="relative z-10 flex h-dvh w-full flex-col overflow-y-auto overscroll-contain bg-primary-fixed/95 px-6 pt-[max(1.25rem,env(safe-area-inset-top))] pb-[max(1.5rem,env(safe-area-inset-bottom))]"
             >
               <div className="mx-auto flex w-full max-w-[1280px] items-center justify-between">
                 <Link href="/" onClick={() => setIsMobileMenuOpen(false)}>
