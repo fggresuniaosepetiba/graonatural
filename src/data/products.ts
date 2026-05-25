@@ -708,6 +708,7 @@ const roundUpToFiveCents = (value: number): number =>
 
 export const products: Product[] = baseProducts.map((product) => ({
   ...product,
+  weight: product.weight.trim().length > 0 ? "50G" : product.weight,
   price:
     product.weight.trim().length > 0
       ? roundUpToFiveCents(product.price / 2)
