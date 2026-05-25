@@ -703,8 +703,15 @@ const baseProducts: Product[] = [
   },
 ];
 
+const roundUpToFiveCents = (value: number): number =>
+  Math.ceil(value / 0.05) * 0.05;
+
 export const products: Product[] = baseProducts.map((product) => ({
   ...product,
+  price:
+    product.weight.trim().length > 0
+      ? roundUpToFiveCents(product.price / 2)
+      : product.price,
   image: localProductImages[product.id] ?? product.image,
 }));
 
