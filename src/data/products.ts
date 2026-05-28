@@ -272,7 +272,7 @@ const baseProducts: Product[] = [
     description: "Caldo de frango natural para sopas, arroz e refogados.",
     weight: "50G",
     badge: "NATURAL",
-    price: 2.75,
+    price: 5.00,
     image:
       "https://images.unsplash.com/photo-1600728257188-480e132c1610?q=80&w=800&auto=format&fit=crop",
     category: "caldos",
@@ -395,6 +395,18 @@ const baseProducts: Product[] = [
     weight: "100G",
     badge: "NATURAL",
     price: 6.60,
+    image:
+      "https://images.unsplash.com/photo-1740501813766-067394db5b64?q=80&w=800&auto=format&fit=crop",
+    category: "condimentos",
+    section: "Temperos e Condimentos",
+  },
+  {
+    id: "tempero-para-frango",
+    name: "Tempero para Frango",
+    description: "Blend especial para deixar frango mais saboroso e aromático.",
+    weight: "50G",
+    badge: "NATURAL",
+    price: 5.90,
     image:
       "https://images.unsplash.com/photo-1740501813766-067394db5b64?q=80&w=800&auto=format&fit=crop",
     category: "condimentos",
@@ -720,12 +732,17 @@ const baseProducts: Product[] = [
 const roundUpToFiveCents = (value: number): number =>
   Math.ceil(value / 0.05) * 0.05;
 
+const fixedWeightedPrices: Partial<Record<Product["id"], number>> = {
+  "caldo-de-frango": 2.5,
+  "tempero-para-frango": 2.95,
+};
+
 export const products: Product[] = baseProducts.map((product) => ({
   ...product,
   weight: product.weight.trim().length > 0 ? "50G" : product.weight,
   price:
     product.weight.trim().length > 0
-      ? roundUpToFiveCents(product.price / 2)
+      ? fixedWeightedPrices[product.id] ?? roundUpToFiveCents(product.price / 2)
       : product.price,
   image: localProductImages[product.id] ?? product.image,
 }));
