@@ -10,7 +10,7 @@ const localProductImages: Partial<Record<Product["id"], string>> = {
   "caldo-de-carne-amaciante": "/images/Produtos/caldo-de-carne-amaciante.png",
   "caldo-de-costela": "/images/Produtos/caldo-de-costela.png",
   "caldo-de-legumes": "/images/Produtos/caldo-de-legumes.png",
-  "caldo-de-frango": "/images/Produtos/caldo-de-frango.png",
+  "caldo-de-frango": "/images/Produtos/caldo-de-galinha.jpeg",
   "caldo-suino": "/images/Produtos/caldo-suíno.png",
   camomila: "/images/Produtos/camomila.jpg",
   cavalinha: "/images/Produtos/cavalinha.jpg",
@@ -54,6 +54,7 @@ const localProductImages: Partial<Record<Product["id"], string>> = {
   "tempero-cominho-com-pimenta": "/images/Produtos/tempero-cominho-com-pimenta.png",
   "tempero-do-chefe-com-curry": "/images/Produtos/tempero-do-chefe-com-curry.png",
   "tempero-do-edu-guedes": "/images/Produtos/tempero-do-edu-guedes.png",
+  "tempero-para-frango": "/images/Produtos/tempero-para-frango.jpeg",
   vinagrete: "/images/Produtos/vinagrete.png",
 };
 
