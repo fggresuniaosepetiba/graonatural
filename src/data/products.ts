@@ -10,6 +10,7 @@ const localProductImages: Partial<Record<Product["id"], string>> = {
   "caldo-de-carne-amaciante": "/images/Produtos/caldo-de-carne-amaciante.png",
   "caldo-de-costela": "/images/Produtos/caldo-de-costela.png",
   "caldo-de-legumes": "/images/Produtos/caldo-de-legumes.png",
+  "caldo-de-frango": "/images/Produtos/caldo-de-frango.png",
   "caldo-suino": "/images/Produtos/caldo-suíno.png",
   camomila: "/images/Produtos/camomila.jpg",
   cavalinha: "/images/Produtos/cavalinha.jpg",
@@ -259,6 +260,18 @@ const baseProducts: Product[] = [
     weight: "100G",
     badge: "NATURAL",
     price: 3.25,
+    image:
+      "https://images.unsplash.com/photo-1600728257188-480e132c1610?q=80&w=800&auto=format&fit=crop",
+    category: "caldos",
+    section: "Caldos, Sais e Especiais",
+  },
+  {
+    id: "caldo-de-frango",
+    name: "Caldo de Frango",
+    description: "Caldo de frango natural para sopas, arroz e refogados.",
+    weight: "50G",
+    badge: "NATURAL",
+    price: 2.75,
     image:
       "https://images.unsplash.com/photo-1600728257188-480e132c1610?q=80&w=800&auto=format&fit=crop",
     category: "caldos",
